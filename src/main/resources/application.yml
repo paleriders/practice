@@ -1,0 +1,28 @@
+server:
+  port: 8888
+spring:
+  devtools:
+    restart:
+      enabled: true
+      additional-paths: src/main/java
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/prac_test?characterEncoding=UTF-8
+    username: root
+    password: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    database-platform: org.hibernate.dialect.MySQLDialect
+  jackson:
+    serialization:
+      fail-on-empty-beans: false
+  tomcat:
+     max-http-header-size: 8192
+#    mybatis:
+#      #实体类所做包
+#      type-aliases-package: learning.model
+#      #mapper.xml所在位置
+#      mapper-locations: classpath:mappers/*.xml
+
